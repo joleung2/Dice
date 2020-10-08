@@ -53,13 +53,12 @@ void draw()
   text("6's: " + numberCount[5], 475, 375);
   //average
   float sum = (float)(numberCount[0] * 1 + numberCount[1] * 2 + numberCount[2] * 3 + numberCount[3] * 4 + numberCount[4] * 5 + numberCount[5] * 6);
-  float averageNum = sum/36;
-  String average = String.format("%.2f", averageNum);
-  text("Average: " +  average, 540, 250);
+  float averageNum = Math.round((sum / 36) * 100.0) / 100.0;
+  text("Average: " +  averageNum, 540, 250);
   //mode
   text("Mode: " + maxNum, 540, 275);
   //total
-  text("Total: " + sum, 540, 300);
+  text("Total: " + (int)sum, 540, 300);
 }
 
 void mousePressed()
